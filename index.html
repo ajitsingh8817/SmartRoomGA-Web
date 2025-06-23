@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>SmartRoomGA</title></head>
+<body>
+<h2>Enter Student and Room Info</h2>
+<form action="/run" method="post">
+<h3>Students</h3>
+<div th:each="i : ${#numbers.sequence(0,2)}">
+Preference (single/double): <input name="preference"/><br/>
+Year: <input name="year" type="number"/><br/><hr/>
+</div>
+
+<h3>Rooms</h3>
+<div th:each="i : ${#numbers.sequence(0,2)}">
+Room Type (single/double): <input name="roomType"/><br/>
+AC? true/false: <input name="roomAc"/><br/><hr/>
+</div>
+<button type="submit">Run GA</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Result</title></head>
+<body>
+<h2>Room Allocation Result</h2>
+<ul>
+<li th:each="a : ${allocation}" th:text="${a}"></li>
+</ul>
+<p><b>🎉 Matchmaking done! Perfect room for every student.</b></p>
+</body>
+</html>
